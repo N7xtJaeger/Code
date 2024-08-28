@@ -8,7 +8,7 @@ with open('test.csv', 'ab') as f:       # ab Append as Bytes siehe: f.write
 with open('test.csv', 'r') as f:
     print(f.read())
 
-
+(lambda: print("This is an anonymous function"))()      # funky code where the function that was just created gets called immediately...
 
 '''
 The UGLY way, would also have to do a try-finally (sagt linus)
