@@ -9,7 +9,7 @@ with open('test.csv', 'r') as f:
     print(f.read())
 
 (lambda: print("This is an anonymous function"))()      # funky code where the function that was just created gets called immediately...
-
+# a lambda function cant be called like a normal function, it would defeat the purpose of the lambda function
 '''
 The UGLY way, would also have to do a try-finally (sagt linus)
 
