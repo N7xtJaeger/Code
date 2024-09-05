@@ -1,12 +1,19 @@
+"""
+File IO class, V0.1
+Written by Lennart Golumbeck, 04.09.2024
+
+History:
+
+"""
+
 import os
 
-#TODO: Ask Linus what @staticmethod does
 
 class FileIO:
     def __init__(self):
+        pass
 
-
-     def __str__(self):
+    def __str__(self):
         return "You called the FileHandler class"
 
     @staticmethod
@@ -20,14 +27,13 @@ class FileIO:
             pass
 
     @staticmethod
-    def appendtofile(filepath, data, repetitions):
+    def append_to_file(filepath: str, data: [str, list]):
         """
-        A function to append data to a file specified by the input argument 'filepath' as well as the number of
-        repetitions to print the data N times to the file. It also automatically adjust do the type of the data.
+        A function to append data to a file specified by the input argument 'filepath'.
+        It also automatically adjusts to the type of the data.
         Currently, the types int, str and list are supported.
         :param filepath:
         :param data:
-        :param repetitions:
         :return:
         """
         if isinstance(data, str):
@@ -39,9 +45,11 @@ class FileIO:
         elif isinstance(data, int):
             data = f"{data}{os.linesep}".encode('utf-8')
 
+        else:
+            raise Exception("append_to_file, unsupported data type")
+
         with open(filepath, 'ab') as f:
-            for i in range(repetitions):
-                f.write(data)
+            f.write(data)
 
 
     @staticmethod

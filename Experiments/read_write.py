@@ -7,15 +7,15 @@ data = f"{math.sqrt(1*2*3*4*5)}, a, b, c \n"
 
 fio.clearfile(file)
 
-fio.appendtofile(file, data, 6)
+fio.append_to_file(file, data, 6)
 
 fio.readfile(file)
 
 data = [15, 35, 56, 24, 100, 34, 64]
 
-#fio.clearfile(file)
+#fio.clear_file(file)
 
-fio.appendtofile(file, data, 6)
+fio.append_to_file(file, data, 6)
 
 fio.readfile(file)
 
