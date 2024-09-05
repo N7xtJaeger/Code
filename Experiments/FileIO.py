@@ -17,13 +17,13 @@ class FileIO:
         return "You called the FileHandler class"
 
     @staticmethod
-    def clearfile(filepath):
+    def clear_file(filepath: str):
         """
         A function to clear the contents of a file specified by the input argument 'filepath'
         :param filepath: the path of the file that should be cleared
         :return None: No returns
         """
-        with open(filepath, 'w+') as file:
+        with open(filepath, 'w+'):      # as file not needed as we just pass anyway
             pass
 
     @staticmethod
@@ -53,14 +53,14 @@ class FileIO:
 
 
     @staticmethod
-    def readfile(filepath):
+    def read_file(filepath: str) -> str:     # type annotation to specify the return, python doesn't enforce this tho
         """
         A simple function to read the contents of a file specified by the input argument 'filepath'
         :param filepath:
         :return None:
         """
         with open(filepath, 'r') as f:
-            print(f.read())
+            return f.read()
 
 
 '''
